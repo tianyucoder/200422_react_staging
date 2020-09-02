@@ -3,8 +3,13 @@ import './index.css'
 
 export default class Footer extends Component {
 
-	checkAll = ()=>{
-		//函数体
+	checkAll = (event)=>{
+		const {checked} = event.target
+		this.props.checkAll(checked)
+	}
+
+	clearCompleted = ()=>{
+		this.props.clearCompleted()
 	}
 	
 	render() {
@@ -19,7 +24,7 @@ export default class Footer extends Component {
 				<span>
 				<span>已完成{completedCount}</span> / 全部{total}
 				</span>
-				<button className="btn btn-danger">清除已完成任务</button>
+				<button className="btn btn-danger" onClick={this.clearCompleted}>清除已完成任务</button>
 			</div>
 		)
 	}

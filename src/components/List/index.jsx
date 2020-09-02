@@ -1,18 +1,41 @@
 import React, { Component } from 'react'
-import Item from '../Item'
 import './index.css'
 
-export default class List extends Component {
+export default class index extends Component {
 	render() {
-		const {todos,checkTodo,deleteTodo} = this.props
 		return (
-			<ul className="todo-main">
-				{
-					todos.map((todo)=>{
-						return <Item key={todo.id} {...todo} checkTodo={checkTodo} deleteTodo={deleteTodo}/>
-					})
-				}
-			</ul>
+			<div className="row">
+				<div className="card">
+					<a href="https://github.com/reactjs" rel="noopener noreferrer" target="_blank">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2271338977,1611087163&fm=26&gp=0.jpg" style={{width:'100px'}} alt="img"/>
+					</a>
+					<p className="card-text">reactjs</p>
+				</div>
+				<div className="card">
+					<a href="https://github.com/reactjs" target="_blank" rel="noopener noreferrer">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2271338977,1611087163&fm=26&gp=0.jpg" style={{width:'100px'}} alt="img"/>
+					</a>
+					<p className="card-text">reactjs</p>
+				</div>
+				<div className="card">
+					<a href="https://github.com/reactjs" target="_blank" rel="noopener noreferrer">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2271338977,1611087163&fm=26&gp=0.jpg" style={{width:'100px'}} alt="img"/>
+					</a>
+					<p className="card-text">reactjs</p>
+				</div>
+				<div className="card">
+					<a href="https://github.com/reactjs" target="_blank" rel="noopener noreferrer">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2271338977,1611087163&fm=26&gp=0.jpg" style={{width:'100px'}} alt="img"/>
+					</a>
+					<p className="card-text">reactjs</p>
+				</div>
+				<div className="card">
+					<a href="https://github.com/reactjs" target="_blank" rel="noopener noreferrer">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2271338977,1611087163&fm=26&gp=0.jpg" style={{width:'100px'}} alt="img"/>
+					</a>
+					<p className="card-text">reactjs</p>
+				</div>
+			</div>
 		)
 	}
 }
