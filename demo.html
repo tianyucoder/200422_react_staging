@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript" >
+		let obj = {m:{a:1},n:2}
+		let {m} = obj // let m = obj.m
+		m.a = 100
+		console.log(obj.m.a);
+
+		let person = {name:'tom',age:19,sex:'女'}
+		let person2 = {...person,sex:'男'}
+		console.log(person === person2);
+		console.log(person2);
+
+	</script>
+</body>
+</html>
