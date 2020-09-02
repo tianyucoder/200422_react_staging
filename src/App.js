@@ -42,13 +42,27 @@ export default class App extends Component {
 		this.setState({todos:newTodos})
 	}
 
+	//删除一个todo
+	deleteTodo = (id)=>{
+		//使用filter删除
+		/* const todos = this.state.todos.filter((todo)=>{
+			return todo.id !== id
+		}) */
+
+		//使用splice删除
+		const finnId = this.state.todos.findIndex(todo=>todo.id === id)
+		const todos = [...this.state.todos] //复制一份状态中todos
+		todos.splice(finnId,1)
+		this.setState({todos})
+	}
+
 	render() {
 		return (
 			<div className="todo-container">
 				<div className="todo-wrap">
 					<Header addTodo={this.addTodo}/>
-					<List todos={this.state.todos} checkTodo={this.checkTodo}/>
-					<Footer/>
+					<List todos={this.state.todos} checkTodo={this.checkTodo} deleteTodo={this.deleteTodo}/>
+					<Footer todos={this.state.todos} />
 				</div>
 			</div>
 		)
