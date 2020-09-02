@@ -28,7 +28,7 @@ export default class App extends Component {
 		this.setState({todos:[todoObj,...todos]})
 	}
 
-	//勾选/取消勾选一个todo
+	//勾选、取消勾选一个todo
 	checkTodo = (id,completed)=>{
 		const {todos} = this.state
 		const newTodos = todos.map(todo =>{
