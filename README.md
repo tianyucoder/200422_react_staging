@@ -29,7 +29,7 @@
 		1.明确：导航区、展示区
 		2.借助：react-router-dom
 		3.在index.js中使用BrowserRouter包裹App
-		4.页面导航区用Link去写,例如：<Link to="/about">About</Link>
+		4.页面导航区用Link或NavLink去写,例如：<Link to="/about">About</Link>
 		5.展示区，用Route去写，例如：<Route path="/about" component={About}/>
 ## 封装NavLink
 		注意：标签体内容在：this.props.children属性上
