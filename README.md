@@ -31,3 +31,40 @@
 		3.在index.js中使用BrowserRouter包裹App
 		4.页面导航区用Link去写,例如：<Link to="/about">About</Link>
 		5.展示区，用Route去写，例如：<Route path="/about" component={About}/>
+## 封装NavLink
+		注意：标签体内容在：this.props.children属性上
+## 一般组件与路由组件
+		1.写法上的区别：
+				路由组件：<Route path="/about" component={About}/>
+				一般组件：<Header/>
+		2.位置的区别：
+				路由组件：pages里
+				一般组件：components
+		3.属性上的区别:组件实例对象props属性不同
+				路由组件：多了三个属性，如下：
+						history:
+								action: "PUSH"
+								block: ƒ block(prompt)
+								createHref: ƒ createHref(location)
+								go: ƒ go(n)
+								goBack: ƒ goBack()
+								goForward: ƒ goForward()
+								length: 50
+								listen: ƒ listen(listener)
+								location: {pathname: "/about", search: "", hash: "", state: null, key: "5hdnx2"}
+								push: ƒ push(path, state)
+								replace: ƒ replace(path, state)
+						location:
+								hash: ""
+								key: "5hdnx2"
+								pathname: "/about"
+								search: ""
+								state: null
+						match:
+								isExact: true
+								params: {}
+								path: "/about"
+								url: "/about"
+				一般组件：你传什么，就接到什么
+## Switch的使用：
+			一般使用Switch包裹一个一个的Route，提高效率。
