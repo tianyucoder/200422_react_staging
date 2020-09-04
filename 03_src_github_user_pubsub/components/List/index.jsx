@@ -13,11 +13,15 @@ export default class List extends Component {
 
 	componentDidMount(){
 		//订阅消息
-		PubSub.subscribe('update_list',(_,stateObj)=>{
+		this.pub = PubSub.subscribe('update_list',(_,stateObj)=>{
 			this.setState(stateObj)
 		})
 	}
 
+	componentWillUnmount(){
+		PubSub.unsubscribe(this.pub)
+	}
+	
 	render() {
 		const {users,first,loading,error} = this.state
 		return (
