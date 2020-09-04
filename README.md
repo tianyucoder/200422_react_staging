@@ -22,3 +22,6 @@
 						151.101.184.133    avatars6.githubusercontent.com
 						151.101.184.133    avatars7.githubusercontent.com
 						151.101.184.133    avatars8.githubusercontent.com
+## 消息订阅与发布
+		类比：生活中的订报纸 =====> 先去邮局交钱，说明地址，随后邮递员送报纸
+		先订阅，后发布	
