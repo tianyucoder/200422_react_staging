@@ -1,4 +1,4 @@
-## github用户头像显示失败的解决办法：
+## 1.github用户头像显示失败的解决办法：
 		第一步：打开：C:\Windows\System32\drivers\etc
 		第二步：打开上方文件夹中的hosts，追加如下内容：
 						#github
@@ -22,18 +22,18 @@
 						151.101.184.133    avatars6.githubusercontent.com
 						151.101.184.133    avatars7.githubusercontent.com
 						151.101.184.133    avatars8.githubusercontent.com
-## 消息订阅与发布
+## 2.消息订阅与发布
 		类比：生活中的订报纸 =====> 先去邮局交钱，说明地址，随后邮递员送报纸
 		先订阅，后发布	
-## react中的路由：
+## 3.react中的路由：
 		1.明确：导航区、展示区
 		2.借助：react-router-dom
 		3.在index.js中使用BrowserRouter包裹App
 		4.导航区，用Link或NavLink去写,例如：<Link to="/about">About</Link>
 		5.展示区，用Route去写，例如：<Route path="/about" component={About}/>
-## 封装NavLink
+## 4.封装NavLink
 		注意：标签体内容在：this.props.children属性上
-## 一般组件与路由组件
+## 5.一般组件与路由组件
 		1.写法上的区别：
 				路由组件：<Route path="/about" component={About}/>
 				一般组件：<Header/>
@@ -66,5 +66,15 @@
 								path: "/about"
 								url: "/about"
 				一般组件：你传什么，就接到什么
-## Switch的使用：
+## 6.Switch的使用：
 			一般使用Switch包裹一个一个的Route，提高效率。
+## 7.解决样式丢失的问题
+		1.index.html中使用%PUBLIC_URL%引入样式
+		2.index.html中使用/引入样式
+		3.使用HashRouter代替BrowserRouter
+## 8.精准匹配与模糊匹配
+		1.默认开启的是模糊匹配，若要精准匹配要加exact属性
+		2.注意模糊匹配是从路径开头，以/作为分隔去匹配
+## 9.二级路由的使用
+		注意：二级路由的路径中要体现出其一级路由的路径
+

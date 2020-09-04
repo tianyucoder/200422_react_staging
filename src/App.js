@@ -31,6 +31,7 @@ export default class App extends Component {
 							{/* 封装NavLink */}
 							<MyNavLink to="/about">About</MyNavLink>
 							<MyNavLink to="/home">Home</MyNavLink>
+							{/* <MyNavLink to="/about">猜猜我去哪</MyNavLink> */}
 						</div>
 					</div>
 					<div className="col-xs-6">
@@ -38,8 +39,8 @@ export default class App extends Component {
 							<div className="panel-body">
 							<Switch>
 								<Route path="/about" component={About}/>
-								<Route path="/home" component={Home}/>
-								<Route path="/about" component={Test}/>
+								<Route path="/home"  component={Home}/>
+								{/* <Route path="/about" component={Test}/> */}
 							</Switch>
 							</div>
 						</div>
