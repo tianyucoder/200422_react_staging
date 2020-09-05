@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import About from './pages/About'
 import Home from './pages/Home'
-import Test from './pages/Test'
-import {NavLink,Route,Switch} from 'react-router-dom'
+// import Test from './pages/Test'
+import {Route,Switch,Redirect} from 'react-router-dom'
 import MyNavLink from './components/MyNavLink'
 import Header from './components/Header'
 import './App.css'
@@ -13,7 +13,7 @@ export default class App extends Component {
 			<div>
 				<div className="row">
 					<div className="col-xs-offset-2 col-xs-8">
-						<Header a={1}/>
+						<Header/>
 					</div>
 				</div>
 				<div className="row">
@@ -29,8 +29,8 @@ export default class App extends Component {
 							<NavLink activeClassName="high_light" className="list-group-item" to="/home">Home</NavLink>*/}
 
 							{/* 封装NavLink */}
-							<MyNavLink to="/about">About</MyNavLink>
-							<MyNavLink to="/home">Home</MyNavLink>
+							<MyNavLink replace to="/about">About</MyNavLink>
+							<MyNavLink replace to="/home">Home</MyNavLink>
 							{/* <MyNavLink to="/about">猜猜我去哪</MyNavLink> */}
 						</div>
 					</div>
@@ -41,6 +41,7 @@ export default class App extends Component {
 								<Route path="/about" component={About}/>
 								<Route path="/home"  component={Home}/>
 								{/* <Route path="/about" component={Test}/> */}
+								<Redirect to="/about"/>
 							</Switch>
 							</div>
 						</div>

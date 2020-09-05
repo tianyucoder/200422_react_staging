@@ -28,7 +28,7 @@
 ## 3.react中的路由：
 		1.明确：导航区、展示区
 		2.借助：react-router-dom
-		3.在index.js中使用BrowserRouter包裹App
+		3.在index.js中使用BrowserRouter或HashRouter包裹App
 		4.导航区，用Link或NavLink去写,例如：<Link to="/about">About</Link>
 		5.展示区，用Route去写，例如：<Route path="/about" component={About}/>
 ## 4.封装NavLink

@@ -1,28 +1,37 @@
 import React, { Component } from 'react'
+import {Link,Route} from 'react-router-dom'
+import Detail from './Detail'
 
 export default class Message extends Component {
+
+	state = {
+		messages:[
+			{id:'001',name:'消息1'},
+			{id:'002',name:'消息2'},
+			{id:'003',name:'消息3'},
+			{id:'004',name:'消息4'}
+		]
+	}
+
 	render() {
 		return (
 			<div>
 				<ul>
-					<li>
-						<a href="/home/message/1">message001</a>&nbsp;&nbsp;
-						<button>push查看</button>&nbsp;&nbsp;
-						<button>replace查看</button>
-					</li>
-					<li>
-						<a href="/home/message/3">message003</a>&nbsp;&nbsp;
-						<button>push查看</button>&nbsp;&nbsp;
-						<button>replace查看</button>
-					</li>
-					<li>
-						<a href="/home/message/5">message005</a>&nbsp;&nbsp;
-						<button>push查看</button>&nbsp;&nbsp;
-						<button>replace查看</button>
-					</li>
+					{
+						this.state.messages.map((msg)=>{
+							return (
+								<li key={msg.id}>
+									{/* 路由跳转--传递params参数 */}
+									<Link to={`/home/message/detail/${msg.id}/${msg.name}`}>{msg.name}</Link>&nbsp;&nbsp;
+								</li>
+							)
+						})
+					}
 				</ul>
-				<button>回退</button>
 				<hr/>
+
+				{/* 注册路由---声明接收params参数 */}
+				<Route path="/home/message/detail/:id/:name" component={Detail}/>
 			</div>
 		)
 	}
