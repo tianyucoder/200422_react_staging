@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+// import qs from 'querystring'
 
 const detailDatas = [
 	{id:'001',content:"加油，中国"},
@@ -9,8 +10,26 @@ const detailDatas = [
 export default class Detail extends Component{
 	render(){
 		// 接收路由传递的params参数
-		const {id,name} = this.props.match.params
+		//#region 
+		/* const {id,name} = this.props.match.params
+		console.log(id,name);
+		const result = detailDatas.find(d => d.id === id) || {}  */
+		//#endregion
+
+		// 接收路由传递的search参数
+		//#region 
+		/* const {search} = this.props.location
+		const searchObj = qs.parse(search.split('?')[1])
+		const {id,name} = searchObj
+		const result = detailDatas.find(d => d.id === id) || {} */ 
+		//#endregion
+		
+		// 接收路由传递的location.state参数
+		//#region 
+		const {state} = this.props.location
+		const {id,name} = state || {}
 		const result = detailDatas.find(d => d.id === id) || {}
+		//#endregion
 		return (
 			<ul>
 				<li>ID:{id}</li>

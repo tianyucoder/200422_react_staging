@@ -43,28 +43,18 @@
 		3.属性上的区别:组件实例对象props属性不同
 				路由组件：多了三个属性，如下：
 						history:
-								action: "PUSH"
-								block: ƒ block(prompt)
-								createHref: ƒ createHref(location)
-								go: ƒ go(n)
-								goBack: ƒ goBack()
-								goForward: ƒ goForward()
-								length: 50
-								listen: ƒ listen(listener)
-								location: {pathname: "/about", search: "", hash: "", state: null, key: "5hdnx2"}
-								push: ƒ push(path, state)
-								replace: ƒ replace(path, state)
+								goBack: ƒ goBack() //后退一个路由
+								goForward: ƒ goForward() //前进一个路由
+								push: ƒ push(path, state) //push跳转
+								replace: ƒ replace(path, state) //replace跳转
 						location:
-								hash: ""
-								key: "5hdnx2"
-								pathname: "/about"
-								search: ""
-								state: null
+								pathname: "/about" //当前的路径
+								search: "" //收集search参数
+								state: null //收集state参数
 						match:
-								isExact: true
-								params: {}
-								path: "/about"
-								url: "/about"
+								isExact: true //标识是否为严格匹配
+								params: {} //收集params参数
+								path: "/about" //当前的路径
 				一般组件：你传什么，就接到什么
 ## 6.Switch的使用：
 			一般使用Switch包裹一个一个的Route，提高效率。
