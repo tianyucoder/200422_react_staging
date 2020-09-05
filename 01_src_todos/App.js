@@ -81,7 +81,7 @@ export default class App extends Component {
 					<List todos={this.state.todos} checkTodo={this.checkTodo} deleteTodo={this.deleteTodo}/>
 					<Footer todos={this.state.todos} checkAll={this.checkAll} clearCompleted={this.clearCompleted} />
 				</div>
-			</div>·
+			</div>
 		)
 	}
 }
