@@ -77,4 +77,17 @@
 		2.注意模糊匹配是从路径开头，以/作为分隔去匹配
 ## 9.二级路由的使用
 		注意：二级路由的路径中要体现出其一级路由的路径
+## 10.路由组件间传参：
+		1.传递params参数：
+					导航链接写法：<Link to='/home/message/detail/xxxx/yyyyy'>消息1</Link>
+					注册路由写法：<Route path="/home/message/detail/:id/:name" component={Detail}/>
+					组件内获取参数写法：this.props.match.params，获取到的是所有参数组成的对象
+		2.传递search参数：
+					导航链接写法：
+					注册路由写法：
+					组件内获取参数写法：
+		3.传递location.state参数:
+					导航链接写法：
+					注册路由写法：
+					组件内获取参数写法：
 
