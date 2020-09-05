@@ -69,15 +69,20 @@
 		注意：二级路由的路径中要体现出其一级路由的路径
 ## 10.路由组件间传参：
 		1.传递params参数：
-					导航链接写法：<Link to='/home/message/detail/xxxx/yyyyy'>消息1</Link>
-					注册路由写法：<Route path="/home/message/detail/:id/:name" component={Detail}/>
-					组件内获取参数写法：this.props.match.params，获取到的是所有参数组成的对象
+				导航链接写法：<Link to='/home/message/detail/xxxx/yyyyy'>消息1</Link>
+				注册路由写法：<Route path="/home/message/detail/:id/:name" component={Detail}/>
+				组件内获取参数写法：this.props.match.params，获取到的是所有参数组成的对象
 		2.传递search参数：
-					导航链接写法：
-					注册路由写法：
-					组件内获取参数写法：
+				导航链接写法：
+				<Link to={`/home/message/detail/?id=${msg.id}&name=${msg.name}`}>{msg.name}</Link>
+				注册路由写法：<Route path="/home/message/detail" component={Detail}/> 
+				组件内获取参数写法： const {search} = this.props.location
+				备注：需要用到querystring去解析参数为对象
 		3.传递location.state参数:
-					导航链接写法：
-					注册路由写法：
-					组件内获取参数写法：
+				导航链接写法：
+					<Link to={{pathname:'/home/message/detail',state:{id:msg.id,name:msg.name}}}>{msg.name}</Link>
+				注册路由写法：
+					<Route path="/home/message/detail" component={Detail}/>
+				组件内获取参数写法：
+					const {state} = this.props.location
 
