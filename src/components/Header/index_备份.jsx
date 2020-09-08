@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 
-@withRouter
 class Header extends Component {
 	back = ()=>{
 		this.props.history.goBack()
@@ -21,4 +20,5 @@ class Header extends Component {
 		)
 	}
 }
-export default Header
+export default withRouter(Header)
+//withRouter会接到一个一般组件，返回一个新的组件，但新的组件实例上多了路由组件的特有的属性。
